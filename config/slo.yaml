@@ -7,7 +7,7 @@ primary_slo:
     total_event: 'event == "request_received"'
   target_percent: 99.5
   error_budget_percent: 0.5
-  note: Học viên phải giải thích hoặc điều chỉnh ngưỡng bằng baseline của mình.
+  note: Ngưỡng latency 3000ms được chọn dựa trên baseline đo được (P95 ~1352ms-1574ms), đủ an toàn chống biến động mạng nhưng bắt kịp thời sự cố RAG slow hay nghẽn model. Error budget 0.5% (tương đương 1000 request vi phạm trên 200,000 request/tháng).
 guardrails:
   error_rate_pct_max: 2
   daily_cost_usd_max: 2.5
